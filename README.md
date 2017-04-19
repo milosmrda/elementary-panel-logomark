@@ -2,7 +2,7 @@
 
 Replace the "Applications" text in the panel with the elementary OS logo.
 
-<img src="example.png">
+<img src="example.png" height="60">
 
 ## usage
 
