@@ -35,8 +35,19 @@ killall wingpanel; wingpanel &
 
 ## reversal
 
-To reverse the effects of the above code:
+To reverse the effects of the above code, paste this block in the terminal:
 
-- reinstall slingshot-launcher with `sudo apt install --reinstall slingshot-launcher`
-- open `~/.config/gtk-3.0/gtk.css` and remove the line beginning with `.logo{background...`
-- restart wingpanel with `bash -c "killall wingpanel && wingpanel &"`
+```
+bash -ec "
+
+# reinstall slingshot-launcher
+sudo apt install --reinstall slingshot-launcher
+
+# remove css styling
+sed -i '/^\.logo/d' ~/.config/gtk-3.0/gtk.css
+
+# restart wingpanel
+killall wingpanel; wingpanel &
+
+"
+```
