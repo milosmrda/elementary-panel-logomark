@@ -20,7 +20,7 @@ sed -i 's/Applications\"));/ \"));indicator_label.get_style_context().add_class(
 mkdir build; cd build; cmake .. -DCMAKE_INSTALL_PREFIX=/usr; sudo make install
 
 # download logo and add to panel with css styling
-wget https://git.io/vSpAs -O /tmp/logo.png
+wget https://git.io/vShJn -O /tmp/logo.png
 sudo mv /tmp/logo.png /usr/share/themes/elementary/gtk-3.0/logo.png
 echo ".logo{background:url('/usr/share/themes/elementary/gtk-3.0/logo.png') \
 no-repeat center/20px;padding:0 10px}" >> ~/.config/gtk-3.0/gtk.css
