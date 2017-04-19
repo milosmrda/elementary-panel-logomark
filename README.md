@@ -10,7 +10,8 @@ Paste the following block of code in the terminal:
 bash -ec "
 
 # get slingshot-launcher source and the packages required to build it
-cd /tmp; apt source slingshot-launcher; sudo apt build-dep slingshot-launcher
+cd /tmp; sudo rm -rf slingshot-launcher*
+apt source slingshot-launcher; sudo apt build-dep slingshot-launcher
 
 # edit source code (remove 'Applications' text and add css class `.logo`)
 cd slingshot-launcher*
@@ -38,7 +39,7 @@ killall wingpanel; wingpanel &
 To reverse the effects of the above code, paste this block in the terminal:
 
 ```
-bash -ec "
+bash -c "
 
 # reinstall slingshot-launcher
 sudo apt install --reinstall slingshot-launcher
