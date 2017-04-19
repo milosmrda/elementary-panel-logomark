@@ -2,6 +2,8 @@
 
 Replace the "Applications" text in the panel with the elementary OS logo.
 
+<img src="example.png">
+
 ## usage
 
 Paste the following block of code in the terminal:
