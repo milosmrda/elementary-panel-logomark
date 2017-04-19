@@ -25,7 +25,8 @@ mkdir build; cd build; cmake .. -DCMAKE_INSTALL_PREFIX=/usr; sudo make install
 # download logo and add to panel with css styling
 wget https://git.io/vSh8p -O /tmp/logo.svg
 sudo mv /tmp/logo.svg /usr/share/themes/elementary/gtk-3.0/logo.svg
-echo '.logo{background:url(\"/usr/share/themes/elementary/gtk-3.0/logo.svg\") \
+grep '^\.logo' ~/.config/gtk-3.0/gtk.css || echo '.logo\
+{background:url(\"/usr/share/themes/elementary/gtk-3.0/logo.svg\") \
 no-repeat center/20px;padding:0 10px}' >> ~/.config/gtk-3.0/gtk.css
 
 # restart wingpanel
