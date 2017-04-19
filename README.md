@@ -4,7 +4,7 @@ Replace the "Applications" text in the panel with the elementary OS logo.
 
 ## usage
 
-Just paste the following block of code in the terminal:
+Paste the following block of code in the terminal:
 
 ```
 bash -ec "
@@ -22,11 +22,19 @@ mkdir build; cd build; cmake .. -DCMAKE_INSTALL_PREFIX=/usr; sudo make install
 # download logo and add to panel with css styling
 wget https://git.io/vShJn -O /tmp/logo.png
 sudo mv /tmp/logo.png /usr/share/themes/elementary/gtk-3.0/logo.png
-echo ".logo{background:url('/usr/share/themes/elementary/gtk-3.0/logo.png') \
-no-repeat center/20px;padding:0 10px}" >> ~/.config/gtk-3.0/gtk.css
+echo '.logo{background:url("/usr/share/themes/elementary/gtk-3.0/logo.png") \
+no-repeat center/20px;padding:0 10px}' >> ~/.config/gtk-3.0/gtk.css
 
 # restart wingpanel
 killall wingpanel && wingpanel &
 
 "
 ```
+
+## reversal
+
+To reverse the effects of the above code:
+
+- reinstall slingshot-launcher with `sudo apt install --reinstall slingshot-launcher`
+- open `~/.config/gtk-3.0/gtk.css` and remove the line beginning with `.logo{background...`
+- restart wingpanel with `bash -c "killall wingpanel && wingpanel &"`
