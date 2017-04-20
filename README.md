@@ -42,10 +42,10 @@ Download one of the following logos to `~/.config/gtk-3.0/`, choosing size accor
 With the logo in place, open `~/.config/gtk-3.0/gtk.css` and add the following line:
 
 ```
-.logo{background:url("/path/to/logo.png") no-repeat center/20px;padding:0 10px}
+.logo{background:url("logo.png") no-repeat center/20px;padding:0 10px}
 ```
 
-...replacing `/path/to/logo.png` with the full path to the logo image. (Note that the `~` abbreviation for the user directory won't work.)
+...replacing `logo.png` with the logo image filename.
 
 # restart wingpanel
 killall wingpanel; wingpanel &
