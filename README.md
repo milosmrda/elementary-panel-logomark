@@ -33,7 +33,7 @@ mkdir build; cd build; cmake .. -DCMAKE_INSTALL_PREFIX=/usr; sudo make install"
 
 Download one of the following logos to `~/.config/gtk-3.0/`.
 
-Choose logo size according to the "scaling factor" used by `gsettings`. This factor, which can be checked with `gsettings get org.gnome.desktop.interface scaling-factor | sed 's/.* //'`, is used to "zoom in" the user interface. The default, non-zoomed value is `1`; therefore, most users should download a 20px logo.
+Choose logo size according to the "scaling factor" used by `gsettings`. This factor, which can be checked with `gsettings get org.gnome.desktop.interface scaling-factor | sed 's/.* //'`, is used to "zoom in" the user interface. Most users will not have changed this setting from the default, non-zoomed value of `1`, and should therefore download a 20px logo.
 
  size                      | <img src="example-logo-standard.png" width="30"> standard logo | <img src="example-logo-button.png" width="30"> button logo
 :-------------------------:|:--------------------------------------------------------------:|:------------------------------------------------------------:
