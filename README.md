@@ -37,9 +37,9 @@ Choose logo size based on the "scaling factor" used by `gsettings`. (This factor
 
  size                      | <img src="example-logo-standard.png" width="30"> standard logo | <img src="example-logo-button.png" width="30"> button logo
 :-------------------------:|:--------------------------------------------------------------:|:------------------------------------------------------------:
- 20px (`scaling-factor 1`) | [download](logos/logo-standard-20px.png)                       | [download](logos/logo-button-20px.png)
- 40px (`scaling-factor 2`) | [download](logos/logo-standard-40px.png)                       | [download](logos/logo-button-40px.png)
- 60px (`scaling-factor 3`) | [download](logos/logo-standard-60px.png)                       | [download](logos/logo-button-60px.png)
+ 20px (`scaling-factor 1`) | [download](https://git.io/v9eJ2)                               | [download](https://git.io/v9eJX)
+ 40px (`scaling-factor 2`) | [download](https://git.io/v9eJK)                               | [download](https://git.io/v9eJM)
+ 60px (`scaling-factor 3`) | [download](https://git.io/v9eJi)                               | [download](https://git.io/v9eJ9)
 
 ```
 bash -ec "
