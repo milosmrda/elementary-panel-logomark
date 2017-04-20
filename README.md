@@ -46,6 +46,10 @@ png\") no-repeat center/20px;padding:0 10px}' >> ~/.config/gtk-3.0/gtk.css
 killall wingpanel; wingpanel &"
 ```
 
+## logo switching
+
+To try a different logo, paste the corresponding command from the table in step 1, then run `killall wingpanel; wingpanel &`.
+
 ## reversal
 
 To reverse the effects of the above code, paste this block in the terminal:
