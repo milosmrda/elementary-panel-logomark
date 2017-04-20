@@ -64,7 +64,5 @@ sudo apt install --reinstall slingshot-launcher
 sed -i '/^\.logo/d' ~/.config/gtk-3.0/gtk.css
 
 # restart wingpanel
-killall wingpanel; wingpanel &
-
-"
+killall wingpanel; wingpanel &"
 ```
