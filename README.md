@@ -35,12 +35,11 @@ Download one of the following logos, then move it to the elementary theme direct
 
 Choose logo size based on the "scaling factor" used by `gsettings`. (This factor, which can be checked with `gsettings get org.gnome.desktop.interface scaling-factor`, is used to "zoom in" the user interface. The default, non-zoomed value is `1`.)
 
- standard logo         | button logo                  | size
-:---------------------:|:----------------------------:|:-------------------------:
-||
- <img src="logos/logo-20px.png" width="30"> | [logos/logo-button-20px.png] | 20px (`scaling-factor 1`)
- [logos/logo-40px.png] | [logos/logo-button-40px.png] | 40px (`scaling-factor 2`)
- [logos/logo-60px.png] | [logos/logo-button-60px.png] | 60px (`scaling-factor 3`)
+ size                      | standard logo <img src="example-logo-standard.png" width="30"> | standard logo <img src="example-logo-button.png" width="30">
+:-------------------------:|:--------------------------------------------------------------:|:------------------------------------------------------------:
+ 20px (`scaling-factor 1`) | [download](logos/logo-standard-20px.png)                       | [download](logos/logo-button-20px.png)
+ 40px (`scaling-factor 2`) | [download](logos/logo-standard-40px.png)                       | [download](logos/logo-button-40px.png)
+ 60px (`scaling-factor 3`) | [download](logos/logo-standard-60px.png)                       | [download](logos/logo-button-60px.png)
 
 ```
 bash -ec "
