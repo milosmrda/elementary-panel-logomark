@@ -37,7 +37,7 @@ Choose logo size based on the "scaling factor" used by `gsettings`. (This factor
 
  standard logo         | button logo                  | size
 :---------------------:|:----------------------------:|:-------------------------:
- [logos/logo-20px.png] | [logos/logo-button-20px.png] | 20px (`scaling-factor 1`)
+ <img src="logos/logo-20px.png" width="30"> | [logos/logo-button-20px.png] | 20px (`scaling-factor 1`)
  [logos/logo-40px.png] | [logos/logo-button-40px.png] | 40px (`scaling-factor 2`)
  [logos/logo-60px.png] | [logos/logo-button-60px.png] | 60px (`scaling-factor 3`)
 
