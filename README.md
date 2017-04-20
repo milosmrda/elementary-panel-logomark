@@ -10,11 +10,11 @@ Replace the "Applications" text in the panel with the elementary OS logo.
 
 Download one of the following logos by pasting the corresponding command into the terminal.
 
- size                      | <img src="example-logo-standard.png" width="30"> standard logo    | <img src="example-logo-button.png" width="30"> button logo
-:-------------------------:|:-----------------------------------------------------------------:|:-----------------------------------------------------------------:
- 20px (`scaling-factor 1`) | `wget https://git.io/v9et4 -O ~/.config/gtk-3.0/gtk.css/logo.png` | `wget https://git.io/v9etq -O ~/.config/gtk-3.0/gtk.css/logo.png`
- 40px (`scaling-factor 2`) | `wget https://git.io/v9etB -O ~/.config/gtk-3.0/gtk.css/logo.png` | `wget https://git.io/v9etc -O ~/.config/gtk-3.0/gtk.css/logo.png`
- 60px (`scaling-factor 3`) | `wget https://git.io/v9etE -O ~/.config/gtk-3.0/gtk.css/logo.png` | `wget https://git.io/v9etl -O ~/.config/gtk-3.0/gtk.css/logo.png`
+ size                      | <img src="example-logo-standard.png" width="30"> standard logo  | <img src="example-logo-button.png" width="30"> button logo
+:-------------------------:|:---------------------------------------------------------------:|:----------------------------------------------------------:
+ 20px (`scaling-factor 1`) | `wget https://git.io/v9et4 -O ~/.config/gtk-3.0/logo.png`       | `wget https://git.io/v9etq -O ~/.config/gtk-3.0/logo.png`
+ 40px (`scaling-factor 2`) | `wget https://git.io/v9etB -O ~/.config/gtk-3.0/logo.png`       | `wget https://git.io/v9etc -O ~/.config/gtk-3.0/logo.png`
+ 60px (`scaling-factor 3`) | `wget https://git.io/v9etE -O ~/.config/gtk-3.0/logo.png`       | `wget https://git.io/v9etl -O ~/.config/gtk-3.0/logo.png`
 
 Most users should download the 20px size; the larger versions are for users who have "zoomed in" their display using `scaling-factor`. (Check this factor with `gsettings get org.gnome.desktop.interface scaling-factor | sed 's/.* //'`; the default, unzoomed value is `1`.)
 
