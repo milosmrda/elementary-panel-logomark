@@ -31,9 +31,7 @@ mkdir build; cd build; cmake .. -DCMAKE_INSTALL_PREFIX=/usr; sudo make install"
 
 ### install logo
 
-Download one of the following logos, then move it to the elementary theme directory with `sudo mv logo.png /usr/share/themes/elementary/gtk-3.0/`. (Change `logo.png` to match the name of the downloaded file.)
-
-Choose logo size based on the "scaling factor" used by `gsettings`. (This factor, which can be checked with `gsettings get org.gnome.desktop.interface scaling-factor`, is used to "zoom in" the user interface. The default, non-zoomed value is `1`.)
+Download one of the following logos, choosing size based on the "scaling factor" used by `gsettings`. (This factor, which can be checked with `gsettings get org.gnome.desktop.interface scaling-factor`, is used to "zoom in" the user interface. The default, non-zoomed value is `1`.)
 
  size                      | <img src="example-logo-standard.png" width="30"> standard logo | <img src="example-logo-button.png" width="30"> button logo
 :-------------------------:|:--------------------------------------------------------------:|:------------------------------------------------------------:
@@ -41,15 +39,13 @@ Choose logo size based on the "scaling factor" used by `gsettings`. (This factor
  40px (`scaling-factor 2`) | [download](https://git.io/v9eJK)                               | [download](https://git.io/v9eJM)
  60px (`scaling-factor 3`) | [download](https://git.io/v9eJi)                               | [download](https://git.io/v9eJ9)
 
-```
-bash -ec "
+With the logo in place, open `~/.config/gtk-3.0/gtk.css` and add the following line:
 
-wget https://git.io/vSh8p -O /tmp/logo.svg
-sudo mv /tmp/logo.svg /usr/share/themes/elementary/gtk-3.0/logo.svg
-grep '^\.logo' ~/.config/gtk-3.0/gtk.css || echo '.logo\
-{background:url(\"/usr/share/themes/elementary/gtk-3.0/logo.svg\") \
-no-repeat center/20px;padding:0 10px}' >> ~/.config/gtk-3.0/gtk.css"
 ```
+.logo{background:url("/path/to/logo.png") no-repeat center/20px;padding:0 10px}
+```
+
+...replacing `/path/to/logo.png` with the full path to the logo image. (Note that the `~` abbreviation for the user directory won't work.)
 
 # restart wingpanel
 killall wingpanel; wingpanel &
