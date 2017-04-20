@@ -8,27 +8,17 @@ Replace the "Applications" text in the panel with the elementary OS logo.
 
 ### download logo
 
-Download one of the following logos by pasting a command from the table below into the terminal.
+Download one of the following logos by pasting the corresponding command into the terminal.
 
-Choose logo size according to the "scaling factor" used by `gsettings`. This factor, which can be checked with `gsettings get org.gnome.desktop.interface scaling-factor | sed 's/.* //'`, is used to "zoom in" the user interface. Most users will not have changed this setting from the default, non-zoomed value of `1`, and should therefore download a 20px logo.
+ size                      | <img src="example-logo-standard.png" width="30"> standard logo    | <img src="example-logo-button.png" width="30"> button logo
+:-------------------------:|:-----------------------------------------------------------------:|:-----------------------------------------------------------------:
+ 20px (`scaling-factor 1`) | `wget https://git.io/v9et4 -O ~/.config/gtk-3.0/gtk.css/logo.png` | `wget https://git.io/v9etq -O ~/.config/gtk-3.0/gtk.css/logo.png`
+ 40px (`scaling-factor 2`) | `wget https://git.io/v9etB -O ~/.config/gtk-3.0/gtk.css/logo.png` | `wget https://git.io/v9etc -O ~/.config/gtk-3.0/gtk.css/logo.png`
+ 60px (`scaling-factor 3`) | `wget https://git.io/v9etE -O ~/.config/gtk-3.0/gtk.css/logo.png` | `wget https://git.io/v9etl -O ~/.config/gtk-3.0/gtk.css/logo.png`
 
- size                      | <img src="example-logo-standard.png" width="30"> standard logo | <img src="example-logo-button.png" width="30"> button logo
-:-------------------------:|:--------------------------------------------------------------:|:------------------------------------------------------------:
- 20px (`scaling-factor 1`) | [download](https://git.io/v9eJ2)                               | [download](https://git.io/v9eJX)
- 40px (`scaling-factor 2`) | [download](https://git.io/v9eJK)                               | [download](https://git.io/v9eJM)
- 60px (`scaling-factor 3`) | [download](https://git.io/v9eJi)                               | [download](https://git.io/v9eJ9)
+Most users should download the 20px size; the larger versions are for users who have "zoomed in" their display using `scaling-factor`. (Check this factor with `gsettings get org.gnome.desktop.interface scaling-factor | sed 's/.* //'`; the default, unzoomed value is `1`.)
 
-With the logo in place, open `~/.config/gtk-3.0/gtk.css` and add the following line:
-
-```
-.logo{background:url("logo.png") no-repeat center/20px;padding:0 10px}
-```
-
-...replacing `logo.png` with the logo image filename.
-
-### remove "Applications" text from wingpanel
-
-The "Applications" text label for the application launcher (`slingshot-launcher`) can be removed by modifying the launcher's source code.
+### replace "Applications" text with logo
 
 Paste the following block of code in the terminal:
 
@@ -46,15 +36,14 @@ src/Slingshot.vala
 sed -i 's/Applications/ /' src/Slingshot.vala
 
 # build and install source code
-mkdir build; cd build; cmake .. -DCMAKE_INSTALL_PREFIX=/usr; sudo make install"
-```
+mkdir build; cd build; cmake .. -DCMAKE_INSTALL_PREFIX=/usr; sudo make install
 
-### restart wingpanel
+# add logo to wingpanel with custom css styling
+grep '^\.logo' ~/.config/gtk-3.0/gtk.css || echo '.logo{background:url(\"logo.\
+png\") no-repeat center/20px;padding:0 10px}' >> ~/.config/gtk-3.0/gtk.css
 
-Finally, restart wingpanel by running:
-
-```
-bash -c "killall wingpanel; wingpanel &"
+# restart wingpanel
+killall wingpanel; wingpanel &"
 ```
 
 ## reversal
@@ -64,10 +53,10 @@ To reverse the effects of the above code, paste this block in the terminal:
 ```
 bash -c "
 
-# reinstall slingshot-launcher
+# reinstall the original slingshot-launcher
 sudo apt install --reinstall slingshot-launcher
 
-# remove css styling
+# remove the custom css styling
 sed -i '/^\.logo/d' ~/.config/gtk-3.0/gtk.css
 
 # restart wingpanel
