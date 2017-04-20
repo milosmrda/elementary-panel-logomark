@@ -49,8 +49,13 @@ With the logo in place, open `~/.config/gtk-3.0/gtk.css` and add the following l
 
 ...replacing `logo.png` with the logo image filename.
 
-# restart wingpanel
-killall wingpanel; wingpanel &
+### restart wingpanel
+
+Finally, restart wingpanel by running:
+
+```
+bash -c "killall wingpanel; wingpanel &"
+```
 
 ## reversal
 
