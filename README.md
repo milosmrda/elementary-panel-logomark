@@ -48,7 +48,7 @@ killall wingpanel; wingpanel &"
 
 ## logo switching
 
-To try a different logo, paste a command from the table in step 1, then run `killall wingpanel; wingpanel &`.
+To try a different logo, paste a command from the table in step 1, then run `bash -c "killall wingpanel; wingpanel &"`.
 
 ## reversal
 
