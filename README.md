@@ -6,7 +6,7 @@ Replace the "Applications" text in the panel with the elementary OS logo.
 
 ## usage
 
-### download logo
+### step 1 - download logo
 
 Download one of the following logos by pasting the corresponding command into the terminal.
 
@@ -16,9 +16,9 @@ Download one of the following logos by pasting the corresponding command into th
  40px (`scaling-factor 2`) | `wget https://git.io/v9etB -O ~/.config/gtk-3.0/logo.png`       | `wget https://git.io/v9etc -O ~/.config/gtk-3.0/logo.png`
  60px (`scaling-factor 3`) | `wget https://git.io/v9etE -O ~/.config/gtk-3.0/logo.png`       | `wget https://git.io/v9etl -O ~/.config/gtk-3.0/logo.png`
 
-Most users should download the 20px size; the larger versions are for users who have "zoomed in" their display using `scaling-factor`. (Check this factor with `gsettings get org.gnome.desktop.interface scaling-factor | sed 's/.* //'`; the default, unzoomed value is `1`.)
+Most users should download the 20px size; the larger versions are for displays that have been "zoomed in" with `scaling-factor`. (Check this factor with `gsettings get org.gnome.desktop.interface scaling-factor | sed 's/.* //'`; the default, unzoomed value is `1`.)
 
-### replace "Applications" text with logo
+### step 2 - replace "Applications" text with logo
 
 Paste the following block of code in the terminal:
 
