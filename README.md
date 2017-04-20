@@ -52,7 +52,7 @@ To try a different logo, paste a command from the table in step 1, then run `bas
 
 ## reversal
 
-To reverse the effects of the above code, paste this block in the terminal:
+To revert to the default "Applications" text, paste this block in the terminal:
 
 ```
 bash -c "
