@@ -1,6 +1,6 @@
 # elementary-panel-logomark
 
-Replace the "Applications" text in the panel with the elementary OS logo.
+Replace the "Applications" text in the panel with the elementary OS logo/icon.
 
 <img src="example.png" width="250">
 
