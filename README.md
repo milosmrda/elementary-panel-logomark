@@ -44,10 +44,6 @@ png\") no-repeat center/20px;padding:0 10px}' >> ~/.config/gtk-3.0/gtk.css
 killall wingpanel; wingpanel &"
 ```
 
-## logo switching
-
-To try a different logo, paste a command from the table in step 1, then run `bash -c "killall wingpanel; wingpanel &"`.
-
 ## reversal
 
 To revert to the default "Applications" text, paste this block in the terminal:
