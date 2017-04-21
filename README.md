@@ -10,9 +10,9 @@ Replace the "Applications" text in the panel with the elementary OS logo/icon.
 
 Download one of the following logos by pasting the corresponding command into the terminal:
 
-20px (scaling-factor 1): `wget https://git.io/v9et4 -O ~/.config/gtk-3.0/logo.png`
-40px (scaling-factor 2): `wget https://git.io/v9etB -O ~/.config/gtk-3.0/logo.png`
-60px (scaling-factor 3): `wget https://git.io/v9etE -O ~/.config/gtk-3.0/logo.png`
+- 20px logo (scaling-factor 1): `wget https://git.io/v9et4 -O ~/.config/gtk-3.0/logo.png`
+- 40px logo (scaling-factor 2): `wget https://git.io/v9etB -O ~/.config/gtk-3.0/logo.png`
+- 60px logo (scaling-factor 3): `wget https://git.io/v9etE -O ~/.config/gtk-3.0/logo.png`
 
 Most users should download the 20px size; the larger versions are for displays that have been "zoomed in" with `scaling-factor`. (Check this factor with `gsettings get org.gnome.desktop.interface scaling-factor | sed 's/.* //'`; the default, unzoomed value is `1`.)
 
